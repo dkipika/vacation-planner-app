@@ -3,10 +3,8 @@ import streamlit as st
 import google.generativeai as genai
 import os
 
-
-
 # Load API Key from environment variable
-api_key = os.getenv("GEMINI_API_KEY")
+api_key = st.secrets["GEMINI_API_KEY"]
 
 # Check if API key is available
 if not api_key:
